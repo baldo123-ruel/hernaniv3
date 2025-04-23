@@ -9,6 +9,17 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('user.login'); // This points to resources/views/user/dashboard.blade.php
+        return view('user.login'); 
+    }
+
+    public function showLoginForm()
+    {
+        return view('user.login'); 
+    }
+
+    // Display the registration page
+    public function showRegisterForm()
+    {
+        return view('user.register'); 
     }
 }

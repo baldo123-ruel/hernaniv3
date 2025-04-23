@@ -10,4 +10,7 @@ export default defineConfig({
         }),
         tailwindcss(),
     ],
+    build: {
+        outDir: 'dist',  // Change to 'dist' to match Vercel's expected output directory
+    },
 });

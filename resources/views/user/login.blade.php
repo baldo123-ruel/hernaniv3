@@ -10,7 +10,7 @@
 <div class="container">
     <header class="header-svg">
         <div class="header-info">
-             <div class="name">Create Account</div>
+             <div class="name">Login Account</div>
              <div class="parag">Input the Details Correctly</div>
         </div>
         <img src="{{ asset('images/logo.jfif') }}" alt="Logo">
@@ -42,7 +42,9 @@
   <button title="Sign In" type="submit" class="sign-in_btn">
     <span>Sign In</span>
   </button>
-  <p class="reg-link">Already have an account?</p>
+  <a href="{{ route('register') }}">
+    <p class="reg-link">Haven't yet an Account?</p>
+</a>
   <p class="note">Terms of use &amp; Conditions</p>
 </form>
 </div>

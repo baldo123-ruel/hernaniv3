@@ -156,6 +156,20 @@ border-radius: 100px;
 }
 
 
+.form-step-title {
+  font-size: 14px;
+  width: fit-content;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 20px;
+  background: rgba(195, 205, 255, 0.6); /* Semi-transparent background */
+  padding: 5px 20px 5px 5px;
+  font-family: 'Poppins';
+  font-weight: 400;
+  color: black;
+  backdrop-filter: blur(10px); /* Apply blur to the background */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+}
 
 .input_container {
   width: 100%;
