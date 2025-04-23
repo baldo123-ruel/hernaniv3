@@ -1,9 +1,7 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-*{
+/* Reset styles */
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -18,19 +16,21 @@ html, body {
   padding: 0;
 }
 
+/* Header Section */
 .header-svg {
   display: flex;
   height: 140px;
-  justify-content: space-between; /* Aligns the content (header-info left, logo right) */
-  align-items: center; /* Vertically centers the content */
-  padding: 10px; /* Optional: Adjusts padding */
-  max-width: 1200px; /* Optional: Max width of header */
-  margin: 0 auto; /* Centers the content horizontally */
-  background-image: url('data:image/svg+xml;utf8,<svg width="412" height="140" viewBox="0 0 412 140" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H412V120C412 131.046 403.046 140 392 140H20C8.95431 140 0 131.046 0 120V0Z" fill="%23596AC0"/><circle cx="350" cy="73" r="50" fill="%235564B3"/><circle cx="62" cy="11" r="50" fill="%235564B3"/></svg>'); /* Inline SVG as background image */
-  background-size: cover; /* Ensure the background image covers the area */
+  justify-content: space-between; /* Align header content */
+  align-items: center; /* Vertically center content */
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-image: url('data:image/svg+xml;utf8,<svg width="412" height="140" viewBox="0 0 412 140" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H412V120C412 131.046 403.046 140 392 140H20C8.95431 140 0 131.046 0 120V0Z" fill="%23596AC0"/><circle cx="350" cy="73" r="50" fill="%235564B3"/><circle cx="62" cy="11" r="50" fill="%235564B3"/></svg>');
+  background-size: cover;
   background-position: center; /* Center the background image */
 }
 
+/* Header Content */
 .header-content {
   position: absolute;
   top: 50%;
@@ -39,6 +39,8 @@ html, body {
   color: white;
   text-align: center;
 }
+
+/* Flex container for header items */
 .header-flex {
   position: absolute;
   top: 10%;
@@ -47,64 +49,53 @@ html, body {
   color: white;
   text-align: center;
   display: flex;
-  justify-content: space-between; /* This will space out the content */
-  align-items: center; /* Vertically center the content */
-  padding: 10px; /* Optional: Adjusts padding */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
-.header-info .name{
-  /* Create Account */
 
-position: absolute;
-width: 160px;
-height: 30px;
-left: 26px;
-top: 35px;
-
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 30px;
-/* identical to box height */
-
-color: #FFFFFF;
-
-
+.header-info .name {
+  position: absolute;
+  width: 160px;
+  height: 30px;
+  left: 26px;
+  top: 35px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
 }
-.header-info .parag{
-  /* Input the details correctly */
 
-position: absolute;
-left: 26px;
-top: 70px;
-
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 300;
-font-size: 14px;
-line-height: 21px;
-/* identical to box height */
-
-color: #FFFFFF;
-
-
+.header-info .parag {
+  position: absolute;
+  left: 26px;
+  top: 70px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFFFFF;
 }
+
 .header-info {
-  text-align: left; /* Align the text to the left */
+  text-align: left; 
 }
 
+/* Image for profile/logo */
 img {
-
-position: absolute;
-width: 84px;
-height: 84px;
-left: 314px;
-top: 28px;
-background: url(0140bbe7-9f85-4365-ad50-98b218f71106.jpg);
-border-radius: 100px;
-
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  left: 314px;
+  top: 28px;
+  background: url(0140bbe7-9f85-4365-ad50-98b218f71106.jpg);
+  border-radius: 100px;
 }
 
+/* Header Text */
 .header-content h1 {
   margin: 0;
   font-size: 2.5rem;
@@ -114,36 +105,37 @@ border-radius: 100px;
   font-size: 1.2rem;
 }
 
+/* Responsive Design for header text */
 @media (max-width: 768px) {
   .header-content h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
-
   .header-content p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .header-content h1 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
-
   .header-content p {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 }
 
+/* Main Wrapper */
 .wrapper {
-  height: 100%;  /* Full height of the page */
-  display: flex;  /* Use Flexbox */
-  justify-content: center;  /* Centers horizontally */
-  align-items: center;  /* Centers vertically */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-/* From Uiverse.io by zanina-yassine */ 
+
+/* Form Container */
 .form_container {
   width: 90%;
-  max-width: 600px;  /* Optional: limits the width of the form container */
+  max-width: 600px;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -159,22 +151,23 @@ border-radius: 100px;
   font-family: 'Poppins';
 }
 
-
+/* Form Step Title */
 .form-step-title {
   font-size: 14px;
   width: fit-content;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-bottom: 20px;
-  background: rgba(195, 205, 255, 0.6); /* Semi-transparent background */
+  background: rgba(195, 205, 255, 0.6);
   padding: 5px 20px 5px 5px;
   font-family: 'Poppins';
   font-weight: 400;
   color: black;
-  backdrop-filter: blur(10px); /* Apply blur to the background */
-  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
 }
 
+/* Input Fields */
 .input_container {
   width: 100%;
   height: fit-content;
@@ -210,7 +203,8 @@ border-radius: 100px;
     drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
   transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
-.reg-link{
+
+.reg-link {
   font-size: 12px;
   cursor: pointer;
   opacity: 0.6;
@@ -222,6 +216,7 @@ border-radius: 100px;
   background-color: transparent;
 }
 
+/* Buttons */
 .sign-in_btn {
   width: 100%;
   height: 40px;
@@ -234,7 +229,7 @@ border-radius: 100px;
   cursor: pointer;
 }
 
-.sign-in_ggl {
+.sign-in_ggl, .sign-in_apl {
   width: 100%;
   height: 40px;
   display: flex;
@@ -251,23 +246,7 @@ border-radius: 100px;
   cursor: pointer;
 }
 
-.sign-in_apl {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: #212121;
-  border-radius: 7px;
-  outline: none;
-  color: #ffffff;
-  border: 1px solid #e5e5e5;
-  filter: drop-shadow(0px 1px 0px #efefef)
-    drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
-  cursor: pointer;
-}
-
+/* Separator */
 .separator {
   width: 100%;
   display: flex;
@@ -285,6 +264,7 @@ border-radius: 100px;
   background-color: #e8e8e8;
 }
 
+/* Note */
 .note {
   font-size: 0.75rem;
   color: #8B8E98;
