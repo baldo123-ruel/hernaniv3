@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    width: 100%;
+  }
+  
+  .header {
+    background-image: url("../images/bg.png");
+    background-size: cover;
+    background-position: center;
+    padding: 20px 30px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  /* Left section: logo + user info */
+  .logo-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .user-info .name {
+    font-weight: 500;
+    font-size: 20px;
+  }
+  
+  .user-info .brgy {
+    font-size: 12px;
+    font-weight: 300;
+    color: #f0f0f0;
+  }
+  
+  /* Right section: menu icon */
+  .menu-icon {
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  /* Fonts are already included globally if added earlier */
+
+.hazard-prep {
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .hazard-prep .title {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #596AC0;
+  }
+  
+  .hazard-content {
+    background-color: #E5E5E5;
+    align-items: center;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+    display: flex;               /* horizontal layout */
+    gap: 10px;                   /* spacing between steps */
+    flex-wrap: nowrap;             /* wraps on smaller screens */
+  }
+  
+  .hazard-step {
+    align-items: center;
+    display: flex;
+    flex-direction: column; 
+    width: 200px;                /* you can tweak width */
+  }
+  
+  .title-step {
+    font-size: 10px;
+    font-weight: 300;
+    color: #596AC0;
+  }
+  
+  .step-img {
+    margin-top: 10px;
+    width: 113.46px;
+    height: 59px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .hazard-type {
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .hazard-type .title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color:#596AC0;
+  }
+  
+  .hazard-content-type {
+    overflow-y: scroll;
+    display: flex;
+    gap: 0.5px; /* spacing between each type box */
+    flex-wrap: nowrap; /* wrap for smaller screens */
+    align-items: center;
+  }
+  .hazard-content-type::-webkit-scrollbar {
+    width: 16px;       /* thickness for vertical scrollbar */
+    height: 16px;      /* thickness for horizontal scrollbar */
+  }
+  .hazard-content::-webkit-scrollbar {
+    width: 16px;       /* thickness for vertical scrollbar */
+    height: 16px;      /* thickness for horizontal scrollbar */
+  }
+  
+  .hazard-content-type .hazard-type {
+    background-color: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .type-img {
+    width: 93px;
+    height: 77px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  

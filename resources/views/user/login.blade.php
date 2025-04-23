@@ -19,7 +19,7 @@
     </header>
 
     <div class="wrapper">
-    <form class="form_container">
+    <form class="form_container" action="{{ route('dashboard') }}">
  
   <br>
   <div class="input_container">

@@ -15,3 +15,7 @@ Route::get('/register', [DashboardController::class, 'showRegisterForm'])->name(
 
 // User Dashboard Route without authentication
 Route::get('/user/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard', function () {
+    return view('user.dashboard');
+})->name('dashboard');
+
