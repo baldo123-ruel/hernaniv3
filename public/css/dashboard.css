@@ -251,6 +251,54 @@ body {
 .logout-button:hover {
   background-color: #c4c4c4;
 }
+.dashboard-content-view,
+.emergency-contact-view,
+.evacuation-center-view,
+.submit-report-view {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease-in-out;
+}
+
+.view-active {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+}
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: color 0.2s ease;
+}
+.back-button:hover {
+  color: white;
+}
+.emer-header,
+.evac-header,
+.sub-header{
+  position: relative;
+  width: 100%;
+  background-image: url("../images/bg1.png");
+    background-size: cover;
+    background-position: center;
+    padding: 20px 30px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
 
 
   
