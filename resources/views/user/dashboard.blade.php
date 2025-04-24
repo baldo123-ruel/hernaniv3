@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 
-    <!-- <link rel="stylesheet" href="https://hernaniv3-production.up.railway.app/css/dashboard.css"> -->
+    <link rel="stylesheet" href="https://hernaniv3-production.up.railway.app/css/dashboard.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Dashboard</title>
