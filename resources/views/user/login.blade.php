@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://hernaniv3-production.up.railway.app/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+  <!-- <link href="https://hernaniv3-production.up.railway.app/css/style.css" rel="stylesheet"> -->
   <title>LOGIN</title>
 </head>
 <body>
@@ -14,13 +16,10 @@
              <div class="parag">Input the Details Correctly</div>
         </div>
         <img src="{{ asset('images/logo.jfif') }}" alt="Logo">
-     
-    
     </header>
 
     <div class="wrapper">
     <form class="form_container" action="{{ route('dashboard') }}">
- 
   <br>
   <div class="input_container">
     <label class="input_label" for="email_field">Email</label>

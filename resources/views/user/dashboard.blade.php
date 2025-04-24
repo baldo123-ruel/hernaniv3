@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://hernaniv3-production.up.railway.app/css/dashboard.css">
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+
+    <!-- <link rel="stylesheet" href="https://hernaniv3-production.up.railway.app/css/dashboard.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Dashboard</title>
@@ -17,10 +19,36 @@
                     <div class="brgy">Brgy .04 Hernani, Eastern Samar.</div>
                 </div>
             </div>
-            <div class="menu-icon">
-                <span class="material-icons">menu</span>
-            </div>
+            <div class="menu-icon" onclick="toggleSidebar()">
+    <span class="material-icons">menu</span>
+</div>
            </header>
+
+           <div id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <img src="{{ asset('images/logo.jfif') }}" alt="Logo" class="logo">
+        <div class="user-info">
+            <div class="username">John Doe</div>
+            <div class="role">Public Community</div>
+        </div>
+    </div>
+
+    <ul class="nav-list">
+        <li class="nav-item active">Profile</li>
+        <li class="nav-item">Emergency Contact</li>
+        <li class="nav-item">Evacuation Centers</li>
+        <li class="nav-item">Submit Report</li>
+    </ul>
+
+    <!-- Logout Button -->
+<div class="logout-container">
+    <button class="logout-button">
+        <span class="material-icons">logout</span>
+        Logout
+    </button>
+</div>
+
+</div>
 
            <div class="hazard-prep">
                  <div class="title">
@@ -74,17 +102,28 @@
            </div>
            <div id="map"></div>
 
-           
-        
         </div>
         
 <!-- Your map and logic JS FIRST -->
 <script>
+
+function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('active');
+    }
+
+    // Optional: close sidebar on nav item click
+    document.querySelectorAll('.nav-item').forEach(item => {
+        item.addEventListener('click', () => {
+            document.querySelector('.sidebar').classList.remove('active');
+            document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+        });
+    });
     // Define globally before Google loads
     window.initMap = function () {
         const map = new google.maps.Map(document.getElementById('map'), {
             center: { lat: 11.313, lng: 125.469 },
-            zoom: 10
+            zoom: 15
         });
 
         const kmlLayer = new google.maps.KmlLayer({

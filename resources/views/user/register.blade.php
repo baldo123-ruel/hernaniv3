@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://hernaniv3-production.up.railway.app/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+  <!-- <link href="https://hernaniv3-production.up.railway.app/css/style.css" rel="stylesheet"> -->
   <title>Register</title>
   <style>
     .step {
@@ -96,7 +98,7 @@
           <button title="Sign In" type="submit" class="sign-in_btn">
     <span>Sign In</span>
   </button>
-  <a href="{{ route('login') }}">
+  <a href="{{ route('login') }}" id="reg-link">
     <p class="reg-link">Already have an Account?</p>
 </a>
         </div>
