@@ -12,6 +12,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+    <link rel="stylesheet" href="http://hernaniv3-production.up.railway.app/css/dashboard.css">
+
 
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

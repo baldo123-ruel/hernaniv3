@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!-- <link href="https://hernaniv3-production.up.railway.app/css/style.css" rel="stylesheet"> -->
+  <link href="https://hernaniv3-production.up.railway.app/css/style.css" rel="stylesheet">
   <title>LOGIN</title>
 </head>
 <body>
