@@ -213,7 +213,7 @@ html, body {
 }
 
 /* Buttons */
-.sign-in_btn {
+.sign-in_btn ,.sign-up_btn{
   width: 100%;
   height: 40px;
   border: 0;
@@ -265,4 +265,46 @@ html, body {
   font-size: 0.75rem;
   color: #8B8E98;
   text-decoration: underline;
+}
+.custom-alert {
+  position: fixed;
+  top: -100px;
+  font-family: 'Poppins';
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transition: top 0.5s ease-in-out;
+  font-size: 12px;
+  text-align: center;
+  width: 300px;
+}
+
+.custom-alert.show {
+  top: 20px;
+}
+
+.progress-bar {
+  height: 5px;
+  background: #fff;
+  margin-top: 10px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  background: #000;
+  width: 0%;
+  animation: progressAnim 3s linear forwards;
+}
+
+@keyframes progressAnim {
+  from { width: 0%; }
+  to { width: 100%; }
 }

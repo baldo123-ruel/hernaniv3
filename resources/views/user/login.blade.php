@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
-  <link href="https://hernaniv3-production.up.railway.app/css/style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- <link href="https://hernaniv3-production.up.railway.app/css/style.css" rel="stylesheet"> -->
   <title>LOGIN</title>
 </head>
 <body>
@@ -19,7 +19,9 @@
     </header>
 
     <div class="wrapper">
-    <form class="form_container" action="{{ route('dashboard') }}">
+    <form class="form_container" action="{{ route('login.submit') }}" method="POST">
+    @csrf
+
   <br>
   <div class="input_container">
     <label class="input_label" for="email_field">Email</label>
@@ -48,6 +50,50 @@
 </form>
 </div>
 </div>
+<script>
+  document.querySelector('.form_container').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    let email = document.getElementById('email_field').value;
+    let password = document.getElementById('password_field').value;
+    let token = document.querySelector('input[name="_token"]').value;
+
+    fetch("{{ route('login.submit') }}", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-TOKEN': token
+      },
+      body: JSON.stringify({ email, password })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Login Successful',
+          showConfirmButton: false,
+          timer: 1500
+        }).then(() => {
+          window.location.href = data.redirect;
+        });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Login Failed',
+          text: data.message
+        });
+      }
+    })
+    .catch(err => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong!'
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
